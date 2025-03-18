@@ -1078,7 +1078,7 @@
           case "whatsapp":
             window.open(
               `https://api.whatsapp.com/send?text=${encodeURIComponent(
-                title + " - " + text + " " + url
+                "*"+title + "* \n\n " + text + " \n\n- " + url
               )}`,
               "_blank"
             );
@@ -1087,7 +1087,7 @@
             window.open(
               `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
                 url
-              )}&quote=${encodeURIComponent(title + " - " + text)}`,
+              )}&quote=${encodeURIComponent(title + " \n\n " + text)}`,
               "_blank"
             );
             break;
