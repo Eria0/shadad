@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأذكار - صدقة جارية للمرحوم محمد شداد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-dark: #A67C00;
+            --gold-primary: #D4AF37;
+            --gold-secondary: #FFBF00;
+            --gold-light: #F5E7A3;
+            --cream-light: #FFFCF2;
+            --cream-dark: #F3EFE0;
+            --green-dark: #1B4D3E;
+            --green-light: #2D8659;
+            --brown-dark: #3E2723;
+            --brown-light: #6D4C41;
+            --shadow-gold: rgba(214, 175, 55, 0.3);
+            --shadow-dark: rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--cream-light);
+            color: var(--brown-dark);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 50% 50%, var(--cream-light) 0%, var(--cream-dark) 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            padding: 40px 0 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+        }
+        
+        .islamic-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.03;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><path fill="none" stroke="%23A67C00" stroke-width="1" d="M20,0 L20,80 M40,0 L40,80 M60,0 L60,80 M0,20 L80,20 M0,40 L80,40 M0,60 L80,60 M0,0 L80,80 M80,0 L0,80"/></svg>');
+            background-size: 80px 80px;
+        }
+        
+        .title-ornament {
+            margin: 0 auto 20px;
+            width: 120px;
+            height: 30px;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 30"><path fill="%23D4AF37" d="M60,0 L40,15 L20,5 L0,15 L20,25 L40,15 L60,30 L80,15 L100,25 L120,15 L100,5 L80,15 z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .title-container {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .main-title {
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin: 0 0 10px;
+            text-align: center;
+            padding: 0;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--brown-light);
+            margin: 0;
+            text-align: center;
+        }
+        
+        .frame {
+            border: 8px solid transparent;
+            border-image: linear-gradient(45deg, var(--gold-dark), var(--gold-primary), var(--gold-light), var(--gold-primary), var(--gold-dark)) 1;
+            padding: 2px;
+            background-color: white;
+            box-shadow: 0 10px 30px var(--shadow-gold), 0 5px 15px var(--shadow-dark);
+            margin-bottom: 40px;
+            border-radius: 2px;
+        }
+        
+        .frame-inner {
+            border: 1px solid var(--gold-light);
+            padding: 30px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .frame-inner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="none" stroke="%23F5E7A3" stroke-width="0.5" d="M0,0 L40,40 M40,0 L0,40"/></svg>');
+            background-size: 40px 40px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title {
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 2rem;
+            color: var(--green-dark);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+        }
+        
+        .dhikr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .dhikr-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow-dark);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .dhikr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow-gold), 0 10px 20px var(--shadow-dark);
+        }
+        
+        .dhikr-header {
+            background: var(--green-dark);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-family: 'Amiri', serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dhikr-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+        }
+        
+        .dhikr-count {
+            text-align: center;
+            padding: 30px 20px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .dhikr-count:active {
+            transform: scale(0.98);
+        }
+        
+        .dhikr-count::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 80px;
+            height: 80px;
+            background: var(--gold-light);
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: -1;
+            transition: transform 0.5s ease-out;
+        }
+        
+        .dhikr-count:active::before {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+        
+        .count-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .count-limit {
+            font-size: 1rem;
+            color: var(--brown-light);
+            opacity: 0.7;
+        }
+        
+        .progress-container {
+            padding: 0 20px 20px;
+        }
+        
+        .progress-bar-container {
+            height: 10px;
+            background: var(--cream-dark);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary));
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+        
+        .total-counter {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background: var(--cream-light);
+            border-radius: 10px;
+            border: 1px solid var(--gold-light);
+        }
+        
+        .total-label {
+            font-size: 1.2rem;
+            color: var(--brown-light);
+            margin-bottom: 5px;
+        }
+        
+        .total-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+        }
+        
+        .dua-section {
+            margin: 60px 0;
+        }
+        
+        .dua-content {
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px var(--shadow-dark);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gold-light);
+        }
+        
+        .dua-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .dua-ornament {
+            display: block;
+            margin: 30px auto;
+            width: 100px;
+            height: 25px;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 25"><path fill="%23D4AF37" d="M50,0 L40,10 L30,5 L20,10 L10,5 L0,10 L10,15 L20,10 L30,15 L40,10 L50,25 L60,10 L70,15 L80,10 L90,15 L100,10 L90,5 L80,10 L70,5 L60,10 z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+        }
+        
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .completion-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .completion-modal.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .modal-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gold-light);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--gold-dark);
+            border: 3px solid var(--gold-primary);
+        }
+        
+        .modal-title {
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 2rem;
+            color: var(--green-dark);
+            margin-bottom: 15px;
+        }
+        
+        .modal-text {
+            font-size: 1.2rem;
+            color: var(--brown-light);
+            margin-bottom: 30px;
+        }
+        
+        .modal-button {
+            background: var(--gold-primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Tajawal', sans-serif;
+            box-shadow: 0 5px 15px var(--shadow-gold);
+        }
+        
+        .modal-button:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--shadow-gold);
+        }
+        
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .btn-secondary {
+            background: var(--cream-dark);
+            color: var(--brown-dark);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cream-light);
+        }
+        
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px var(--shadow-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .floating-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--shadow-dark);
+            background: var(--gold-dark);
+        }
+        
+        .share-options {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 20px var(--shadow-dark);
+            z-index: 998;
+            display: none;
+        }
+        
+        .share-options.show {
+            display: block;
+            animation: slideIn 0.3s forwards;
+        }
+        
+        .share-options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: none;
+            background: var(--cream-light);
+            color: var(--brown-dark);
+            border-radius: 5px;
+            text-align: right;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .share-options button:hover {
+            background: var(--gold-light);
+        }
+        
+        .share-options button:last-child {
+            margin-bottom: 0;
+        }
+        
+        .share-icon {
+            margin-left: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--brown-light);
+            font-size: 0.9rem;
+            margin-top: 60px;
+            border-top: 1px solid var(--gold-light);
+        }
+        
+        .copyright {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .dhikr-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .frame-inner {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .dua-text {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .frame-inner {
+                padding: 15px;
+            }
+            
+            .dhikr-header {
+                font-size: 1.4rem;
+            }
+            
+            .count-value {
+                font-size: 3rem;
+            }
+            
+            .completion-modal {
+                padding: 30px 20px;
+            }
+            
+            .modal-title {
+                font-size: 1.8rem;
+            }
+            
+            .modal-text {
+                font-size: 1rem;
+            }
+            
+            .floating-button {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        .animate-counter {
+            animation: pulse 0.5s 1;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--gold-light);
+            border-top: 4px solid var(--gold-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .achievements {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .achievement {
+            background: var(--cream-light);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 120px;
+            border: 1px solid var(--gold-light);
+            box-shadow: 0 3px 10px var(--shadow-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .achievement:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow-gold);
+        }
+        
+        .achievement-icon {
+            font-size: 2rem;
+            color: var(--gold-primary);
+            margin-bottom: 10px;
+        }
+        
+        .achievement-name {
+            font-size: 0.9rem;
+            color: var(--brown-dark);
+            font-weight: 500;
+        }
+        
+        .achievement-value {
+            font-size: 1.2rem;
+            color: var(--gold-dark);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="islamic-pattern"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="title-ornament"></div>
+            <div class="title-container">
+                <h1 class="main-title">صدقة جارية</h1>
+                <h2 class="subtitle">باسم المرحوم محمد شداد</h2>
+            </div>
+        </header>
+        
+        <main>
+            <div class="frame">
+                <div class="frame-inner">
+                    <div class="content">
+                        <h2 class="section-title">الأذكار</h2>
+                        
+                        <div class="dhikr-grid">
+                            <div class="dhikr-card">
+                                <div class="dhikr-header">استغفر الله</div>
+                                <div class="dhikr-count" onclick="count('astaghfar')">
+                                    <div class="count-value" id="astaghfar">0</div>
+                                    <div class="count-limit">من 33</div>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-container">
+                                        <div id="bar-astaghfar" class="progress-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="dhikr-card">
+                                <div class="dhikr-header">الحمد لله</div>
+                                <div class="dhikr-count" onclick="count('hamd')">
+                                    <div class="count-value" id="hamd">0</div>
+                                    <div class="count-limit">من 33</div>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-container">
+                                        <div id="bar-hamd" class="progress-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="dhikr-card">
+                                <div class="dhikr-header">لا إله إلا الله</div>
+                                <div class="dhikr-count" onclick="count('tahlil')">
+                                    <div class="count-value" id="tahlil">0</div>
+                                    <div class="count-limit">من 33</div>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-container">
+                                        <div id="bar-tahlil" class="progress-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="dhikr-card">
+                                <div class="dhikr-header">الله أكبر</div>
+                                <div class="dhikr-count" onclick="count('takbir')">
+                                    <div class="count-value" id="takbir">0</div>
+                                    <div class="count-limit">من 33</div>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-container">
+                                        <div id="bar-takbir" class="progress-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="total-counter">
+                            <div class="total-label">إجمالي الأذكار</div>
+                            <div class="total-value" id="total-dhikr">0</div>
+                        </div>
+                        
+                        <div class="achievements">
+                            <div class="achievement">
+                                <div class="achievement-icon">🕋</div>
+                                <div class="achievement-name">الحلقات</div>
+                                <div class="achievement-value" id="total-rounds">0</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-icon">⏱️</div>
+                                <div class="achievement-name">الوقت</div>
+                                <div class="achievement-value" id="total-time">0:00</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-icon">✨</div>
+                                <div class="achievement-name">الحسنات</div>
+                                <div class="achievement-value" id="total-hasanat">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dua-section">
+                <h2 class="section-title">دعاء للمرحوم</h2>
+                <div class="dua-content">
+                    <p class="dua-text">
+                        اللهم اغفر لعبدك محمد شداد، وارحمه، واعف عنه، وأكرم نزله، ووسع مدخله، واغسله بالماء والثلج والبرد، ونقه من الذنوب والخطايا كما ينقى الثوب الأبيض من الدنس.
+                    </p>
+                    <div class="dua-ornament"></div>
+                    <p class="dua-text">
+                        لا تنسَ محمد شداد في دعائك!
+                    </p>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>تم إنشاء هذه الصفحة كصدقة جارية لروح المرحوم محمد شداد. نسأل الله أن يتقبل منا ومنكم صالح الأعمال.</p>
+            <p class="copyright">© 2025 - جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+    
+    <div class="floating-button" id="share-btn">
+        <span>🔗</span>
+    </div>
+    
+    <div class="share-options" id="share-options">
+        <button onclick="shareApp('whatsapp')"><span class="share-icon">📱</span> شارك عبر واتساب</button>
+        <button onclick="shareApp('facebook')"><span class="share-icon">📘</span> شارك عبر فيسبوك</button>
+        <button onclick="shareApp('twitter')"><span class="share-icon">📢</span> شارك عبر تويتر</button>
+        <button onclick="shareApp('copy')"><span class="share-icon">📋</span> نسخ الرابط</button>
+    </div>
+    
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="completion-modal" id="completion-modal">
+            <div class="modal-icon">✓</div>
+            <h3 class="modal-title">أحسنت!</h3>
+            <p class="modal-text">لقد أكملت جميع الأذكار بنجاح، بارك الله فيك وجزاك الله خيراً.</p>
+            <p class="modal-text">كل ذكر بعشر حسنات، تقبل الله منك.</p>
+            <div class="btn-group">
+                <button class="modal-button" onclick="resetCounts()">ابدأ حلقة جديدة</button>
+                <button class="modal-button btn-secondary" onclick="closeModal()">متابعة</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Variables
+let counts = {
+    astaghfar: 0,
+    hamd: 0,
+    tahlil: 0,
+    takbir: 0
+};
+
+let totalCounts = 0;
+let totalRounds = 0;
+let startTime = null;
+let hasanatCount = 0;
+
+// Load counts from localStorage if available
+function loadCounts() {
+    const savedCounts = localStorage.getItem('dhikrCounts');
+    if (savedCounts) {
+        counts = JSON.parse(savedCounts);
+        updateAllCounts();
+    }
+    
+    const savedTotal = localStorage.getItem('totalDhikr');
+    if (savedTotal) {
+        totalCounts = parseInt(savedTotal);
+        document.getElementById('total-dhikr').textContent = totalCounts;
+    }
+    
+    const savedRounds = localStorage.getItem('totalRounds');
+    if (savedRounds) {
+        totalRounds = parseInt(savedRounds);
+        document.getElementById('total-rounds').textContent = totalRounds;
+    }
+    
+    const savedHasanat = localStorage.getItem('totalHasanat');
+    if (savedHasanat) {
+        hasanatCount = parseInt(savedHasanat);
+        document.getElementById('total-hasanat').textContent = hasanatCount;
+    }
+    
+    if (!startTime) {
+        startTime = new Date();
+        localStorage.setItem('startTime', startTime.toString());
+    } else {
+        startTime = new Date(localStorage.getItem('startTime'));
+        updateTimer();
+    }
+}
+
+// Update all counts and progress bars
+function updateAllCounts() {
+    for (const key in counts) {
+        if (counts.hasOwnProperty(key)) {
+            const element = document.getElementById(key);
+            if (element) {
+                element.textContent = counts[key];
+                updateProgressBar(key);
+            }
+        }
+    }
+}
+
+// Update progress bar for a specific dhikr
+function updateProgressBar(type) {
+    const progressBar = document.getElementById(`bar-${type}`);
+    if (progressBar) {
+        const percentage = (counts[type] / 33) * 100;
+        progressBar.style.width = `${percentage}%`;
+    }
+}
+
+// Increment count for a specific dhikr
+function count(type) {
+    if (counts[type] < 33) {
+        counts[type]++;
+        totalCounts++;
+        hasanatCount += 10; // Each dhikr is worth 10 hasanat
+        
+        const element = document.getElementById(type);
+        if (element) {
+            element.textContent = counts[type];
+            element.classList.add('animate-counter');
+            setTimeout(() => {
+                element.classList.remove('animate-counter');
+            }, 500);
+        }
+        
+        updateProgressBar(type);
+        document.getElementById('total-dhikr').textContent = totalCounts;
+        document.getElementById('total-hasanat').textContent = hasanatCount;
+        
+        // Save to localStorage
+        localStorage.setItem('dhikrCounts', JSON.stringify(counts));
+        localStorage.setItem('totalDhikr', totalCounts);
+        localStorage.setItem('totalHasanat', hasanatCount);
+        
+        // Check if all dhikrs are completed
+        checkCompletion();
+    }
+}
+
+// Check if all dhikrs are completed
+function checkCompletion() {
+    if (counts.astaghfar >= 33 && counts.hamd >= 33 && counts.tahlil >= 33 && counts.takbir >= 33) {
+        showCompletionModal();
+    }
+}
+
+// Show completion modal
+function showCompletionModal() {
+    document.getElementById('modal-overlay').classList.add('active');
+    document.getElementById('completion-modal').classList.add('active');
+    totalRounds++;
+    document.getElementById('total-rounds').textContent = totalRounds;
+    localStorage.setItem('totalRounds', totalRounds);
+}
+
+// Close modal
+function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('active');
+    document.getElementById('completion-modal').classList.remove('active');
+}
+
+// Reset all counts
+function resetCounts() {
+    counts = {
+        astaghfar: 0,
+        hamd: 0,
+        tahlil: 0,
+        takbir: 0
+    };
+    
+    updateAllCounts();
+    localStorage.setItem('dhikrCounts', JSON.stringify(counts));
+    closeModal();
+}
+
+// Update timer
+function updateTimer() {
+    if (startTime) {
+        const now = new Date();
+        const diff = now - startTime;
+        
+        const minutes = Math.floor(diff / 60000);
+        const seconds = Math.floor((diff % 60000) / 1000);
+        
+        document.getElementById('total-time').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        
+        setTimeout(updateTimer, 1000);
+    }
+}
+
+// Share application
+function shareApp(platform) {
+    const url = window.location.href;
+    const title = "صدقة جارية للمرحوم محمد شداد";
+    const text = "شارك في الصدقة الجارية للمرحوم محمد شداد عبر قراءة الأذكار وإهداء ثوابها له";
+    
+    switch (platform) {
+        case 'whatsapp':
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' - ' + text + ' ' + url)}`, '_blank');
+            break;
+        case 'facebook':
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title + ' - ' + text)}`, '_blank');
+            break;
+        case 'twitter':
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title + ' - ' + text)}&url=${encodeURIComponent(url)}`, '_blank');
+            break;
+        case 'copy':
+            navigator.clipboard.writeText(url).then(() => {
+                alert('تم نسخ الرابط بنجاح');
+            }).catch(err => {
+                console.error('فشل في نسخ الرابط: ', err);
+            });
+            break;
+    }
+    
+    document.getElementById('share-options').classList.remove('show');
+}
+
+// Toggle share options
+document.getElementById('share-btn').addEventListener('click', function() {
+    document.getElementById('share-options').classList.toggle('show');
+});
+
+// Close share options when clicking outside
+document.addEventListener('click', function(event) {
+    const shareBtn = document.getElementById('share-btn');
+    const shareOptions = document.getElementById('share-options');
+    
+    if (!shareBtn.contains(event.target) && !shareOptions.contains(event.target)) {
+        shareOptions.classList.remove('show');
+    }
+});
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    loadCounts();
+    updateTimer();
+});
+
+</script>
+</body>
+</html>
